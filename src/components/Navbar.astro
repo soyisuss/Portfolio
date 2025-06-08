@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import logo from "@/assets/Logo.png";
+---
+
+<!-- 🔼 NAVBAR -->
+<header class="sticky top-0 z-50 bg-background-alt shadow-lg">
+  <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <Image
+        src={logo}
+        alt="Logo personal"
+        width={40}
+        height={40}
+        loading="eager"
+        class="w-10 h-10 object-contain opacity-90 hover:opacity-100 transition-opacity duration-200"
+      />
+      <a
+        href="#"
+        class="text-accent font-bold text-xl hover:text-accent-hover transition"
+        >Yael Caballero</a
+      >
+    </div>
+
+    <ul class="flex gap-6 text-sm md:text-base">
+      <li>
+        <a href="#sobre-mi" class="text-text-main hover:text-accent transition"
+          >Sobre mí</a
+        >
+      </li>
+      <li>
+        <a href="#proyectos" class="text-text-main hover:text-accent transition"
+          >Proyectos</a
+        >
+      </li>
+      <li>
+        <a
+          href="#habilidades"
+          class="text-text-main hover:text-accent transition">Habilidades</a
+        >
+      </li>
+      <li>
+        <a href="#educacion" class="text-text-main hover:text-accent transition"
+          >Educación</a
+        >
+      </li>
+      <li>
+        <a href="#contacto" class="text-text-main hover:text-accent transition"
+          >Contacto</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,21 @@
+---
+import "@/styles/global.css";
+import Navbar from "@/components/Navbar.astro";
+import Footer from "@/components/Footer.astro";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio de Yael Caballero</title>
+  </head>
+
+  <body class="bg-background text-text-main font-sans scroll-smooth">
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

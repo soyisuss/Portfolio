@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌐 Estilos globales personalizados */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-background text-text-main font-sans leading-relaxed antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-text-heading font-semibold tracking-tight;
+    }
+
+    strong {
+        @apply text-accent;
+    }
+
+    code {
+        @apply bg-background-alt px-1 py-0.5 rounded text-accent text-sm;
+    }
+}
+
+@layer components {
+    a {
+        @apply text-accent hover:text-accent-hover transition-colors;
+    }
+
+    button {
+        @apply bg-accent text-white font-medium px-4 py-2 rounded-lg hover:bg-accent-hover transition;
+    }
+
+    button.secondary {
+        @apply bg-secondary text-white hover:bg-secondary-hover;
+    }
+
+    section {
+        @apply py-16 px-6;
+    }
+
+    .card {
+        @apply bg-background-alt border border-border rounded-2xl shadow-md p-6 hover:shadow-lg transition;
+    }
+}
+
+@layer utilities {
+    ::selection {
+        @apply bg-accent text-white;
+    }
+
+    .text-muted {
+        @apply text-text-muted;
+    }
+
+    .heading-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        @apply rounded-lg;
+    }
+}

@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import avatar from "@/assets/Avatar.png";
+---
+
+<section
+  class="min-h-screen flex flex-col items-center justify-center bg-background px-4 py-16 text-center"
+>
+  <Image
+    src={avatar}
+    alt="Avatar"
+    width={avatar.width}
+    height={avatar.height}
+    loading="eager"
+    class="w-32 h-32 rounded-full border-2 border-accent mb-6 object-cover shadow-lg transition-transform transform hover:scale-105"
+  />
+
+  <h1 class="text-3xl md:text-5xl font-bold text-accent mb-4">
+    Hola, soy Yael Caballero
+  </h1>
+
+  <p class="text-lg md:text-xl text-text-main max-w-2xl">
+    Estudiante de Ingeniería en Inteligencia Artificial
+  </p>
+</section>

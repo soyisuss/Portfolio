@@ -1,0 +1,31 @@
+---
+import ProjectCard from "@/components/ProjectCard.astro";
+
+const projects = [
+  {
+    title: "Clasificador de Voz por Formantes",
+    description:
+      "Clasificador acústico-fonético usando formantes y energía para reconocimiento de vocales.",
+    year: 2025,
+    tech: ["Python", "SVM", "Señal de voz"],
+  },
+  {
+    title: "Predicción de saturación EcoBici",
+    description:
+      "Modelo predictivo con XGBoost para balancear estaciones de bicicletas públicas en CDMX.",
+    year: 2025,
+    tech: ["XGBoost", "Streamlit", "GeoData"],
+  },
+];
+---
+
+<section class="bg-background px-6 py-16">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-2xl md:text-4xl font-semibold text-accent mb-8 text-center">
+      Proyectos destacados
+    </h2>
+    <div class="grid gap-6 md:grid-cols-2">
+      {projects.map((proj) => <ProjectCard {...proj} />)}
+    </div>
+  </div>
+</section>
