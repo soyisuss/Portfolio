@@ -1,32 +1,73 @@
 ---
-// Organización por categorías
-const skills = [
-  "Python",
-  "JavaScript",
-  "Astro",
-  "Tailwind CSS",
-  "XGBoost",
-  "Pandas",
-  "Streamlit",
-  "OpenAI API",
-  "Git",
-  "Linux",
+// Organización por categorías con iconos
+const skillCategories = [
+  {
+    title: "Lenguajes de Programación",
+    skills: [
+      { name: "Python", icon: "devicon:python" },
+      { name: "JavaScript", icon: "devicon:javascript" },
+      { name: "SQL", icon: "devicon:mysql" },
+    ],
+  },
+  {
+    title: "Frameworks & Librerías",
+    skills: [
+      { name: "Astro", icon: "devicon:astro" },
+      { name: "Tailwind CSS", icon: "devicon:tailwindcss" },
+      { name: "Pandas", icon: "devicon:pandas" },
+      { name: "Streamlit", icon: "simple-icons:streamlit" },
+    ],
+  },
+  {
+    title: "Machine Learning & IA",
+    skills: [
+      { name: "Scikit-learn", icon: "devicon:scikitlearn" },
+      { name: "OpenAI API", icon: "simple-icons:openai" },
+      { name: "TensorFlow", icon: "devicon:tensorflow" },
+    ],
+  },
+  {
+    title: "Herramientas & DevOps",
+    skills: [
+      { name: "Git", icon: "devicon:git" },
+      { name: "Linux", icon: "devicon:linux" },
+      { name: "Docker", icon: "devicon:docker" },
+      { name: "VS Code", icon: "devicon:vscode" },
+    ],
+  },
 ];
 ---
 
 <section class="bg-background-alt px-6 py-16">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-2xl md:text-4xl font-semibold text-accent mb-8">
+  <div class="max-w-6xl mx-auto">
+    <h2
+      class="text-2xl md:text-4xl font-semibold text-accent mb-12 text-center"
+    >
       Habilidades Técnicas
     </h2>
-    <div class="flex flex-wrap justify-center gap-4">
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
       {
-        skills.map((skill) => (
-          <span class="text-sm md:text-base bg-background-hover hover:bg-accent hover:text-white text-text-main px-4 py-2 rounded-full shadow transition">
-            {skill}
-          </span>
+        skillCategories.map((category) => (
+          <div class="bg-background-hover rounded-xl p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-accent mb-4 text-center">
+              {category.title}
+            </h3>
+            <div class="flex flex-wrap justify-center gap-3">
+              {category.skills.map((skill) => (
+                <span class="flex items-center gap-2 text-sm bg-background text-text-main hover:bg-accent hover:text-white px-3 py-2 rounded-full shadow transition border border-border">
+                  <iconify-icon icon={skill.icon} class="text-lg" />
+                  {skill.name}
+                </span>
+              ))}
+            </div>
+          </div>
         ))
       }
     </div>
   </div>
 </section>
+
+<script>
+  import "iconify-icon";
+</script>
