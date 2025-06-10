@@ -4,7 +4,7 @@ import avatar from "@/assets/Avatar.png";
 ---
 
 <section
-  class="min-h-screen flex flex-col items-center justify-center bg-background px-4 py-16 text-center"
+  class="min-h-screen flex flex-col items-center justify-center bg-background px-4 text-center"
 >
   <Image
     src={avatar}
@@ -12,14 +12,31 @@ import avatar from "@/assets/Avatar.png";
     width={avatar.width}
     height={avatar.height}
     loading="eager"
-    class="w-32 h-32 rounded-full border-2 border-accent mb-6 object-cover shadow-lg transition-transform transform hover:scale-105"
+    class="w-28 h-28 rounded-full mb-4 object-cover shadow-lg transition-transform transform hover:scale-105"
   />
 
-  <h1 class="text-3xl md:text-5xl font-bold text-accent mb-4">
+  <h1 class="text-5xl md:text-7xl font-bold text-accent mb-3 drop-shadow-lg">
     Hola, soy Yael Caballero
   </h1>
 
-  <p class="text-lg md:text-xl text-text-main max-w-2xl">
+  <p class="text-lg md:text-xl text-text-main max-w-2xl mb-8">
     Estudiante de Ingeniería en Inteligencia Artificial
   </p>
+
+  <!-- Botones -->
+  <div class="flex flex-col sm:flex-row gap-4 mt-6">
+    <a
+      href="/cv.pdf"
+      download
+      class="bg-background hover:bg-background-light px-8 py-3 rounded-lg text-text-main font-medium transition border border-border hover:border-accent"
+    >
+      Descargar CV
+    </a>
+    <a
+      href="#contacto"
+      class="bg-background hover:bg-background-light px-8 py-3 rounded-lg text-text-main font-medium transition border border-border hover:border-accent"
+    >
+      Contactar
+    </a>
+  </div>
 </section>

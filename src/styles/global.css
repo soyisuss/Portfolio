@@ -18,7 +18,7 @@
     h4,
     h5,
     h6 {
-        @apply text-text-heading font-semibold tracking-tight;
+        @apply text-text-main font-semibold tracking-tight;
     }
 
     strong {
@@ -39,10 +39,6 @@
         @apply bg-accent text-white font-medium px-4 py-2 rounded-lg hover:bg-accent-hover transition;
     }
 
-    button.secondary {
-        @apply bg-secondary text-white hover:bg-secondary-hover;
-    }
-
     section {
         @apply py-16 px-6;
     }
@@ -57,19 +53,7 @@
         @apply bg-accent text-white;
     }
 
-    .text-muted {
-        @apply text-text-muted;
-    }
-
-    .heading-shadow {
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    }
-
-    .glass {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        @apply rounded-lg;
+    .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 }

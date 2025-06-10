@@ -3,7 +3,7 @@ const { title, description, year, tech = [] } = Astro.props;
 ---
 
 <div
-  class="bg-background-alt rounded-xl p-6 shadow-lg hover:shadow-xl hover:bg-background-hover transition duration-300"
+  class="bg-background-alt border border-border rounded-xl p-6 shadow-lg hover:shadow-xl hover:bg-background-hover transition duration-300"
 >
   <h3 class="text-xl text-accent font-semibold mb-2">{title}</h3>
   <p class="text-sm text-text-muted mb-3">{year}</p>
@@ -11,7 +11,7 @@ const { title, description, year, tech = [] } = Astro.props;
   <div class="flex flex-wrap gap-2">
     {
       tech.map((tag: string) => (
-        <span class="text-xs bg-secondary text-black px-3 py-1 rounded-full hover:bg-secondary-hover transition">
+        <span class="text-xs bg-accent text-white px-3 py-1 rounded-full hover:bg-accent-hover transition">
           {tag}
         </span>
       ))
