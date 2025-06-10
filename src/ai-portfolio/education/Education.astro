@@ -1,33 +1,98 @@
 ---
 const education = [
   {
-    institution: "Instituto Tecnológico [Nombre]",
+    institution: "Escuela Superior de Cómputo (ESCOM), IPN",
     degree: "Ingeniería en Inteligencia Artificial",
-    period: "2021 – Presente",
+    period: "2022 – Actual",
     description:
-      "Formación enfocada en modelos de aprendizaje automático, visión por computadora, redes neuronales, ética en IA y desarrollo de sistemas inteligentes.",
+      "6º semestre. Enfocado en IA aplicada, desarrollo de software y DevOps. Formación integral en ciencia de datos, visión por computadora y arquitecturas de sistemas inteligentes.",
   },
+];
+
+const certifications = [
+  "🏆 1er lugar – Hackatón Polinterpares IPN (2025)",
+  "☁️ Google Cloud Computing Foundations Certificate (2025)",
+  "🐳 Curso Profesional de Docker – Código Facilito (2025)",
+  "🐍 Curso Profesional de Python – Código Facilito (2025)",
+  "📚 Curso Profesional de Git y GitHub – Platzi (2025)",
+  "🏗️ Curso de Arquitecturas Limpias – Platzi (2025)",
+  "⚡ Curso Profesional de SCRUM – Platzi (2025)",
+];
+
+const inProgress = [
+  "GitHub Foundations Certification",
+  "GitHub Actions Certification",
+  "Python Developer Career – Coursera",
+  "Google Cloud Engineering Certificate",
 ];
 ---
 
-<section class="bg-background px-6 py-16">
-  <div class="max-w-4xl mx-auto">
+<section class="bg-background px-6 py-16" id="educacion">
+  <div class="max-w-5xl mx-auto">
     <h2 class="text-2xl md:text-4xl font-semibold text-accent mb-8 text-center">
-      Educación
+      Educación y Certificaciones
     </h2>
 
-    {
-      education.map((item) => (
-        <div class="bg-background-alt border border-border p-6 rounded-xl shadow-lg">
-          <h3 class="text-xl text-accent font-bold mb-2">{item.degree}</h3>
-          <p class="text-md text-text-muted mb-3">
-            {item.institution} &bull; {item.period}
-          </p>
-          <p class="text-base text-text-main leading-relaxed">
-            {item.description}
+    <!-- Educación -->
+    <div class="mb-12">
+      {
+        education.map((item) => (
+          <div class="bg-background-alt border border-border p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl text-accent font-bold mb-2">{item.degree}</h3>
+            <p class="text-md text-text-muted mb-3">
+              {item.institution} • {item.period}
+            </p>
+            <p class="text-base text-text-main leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Certificaciones -->
+    <div class="grid md:grid-cols-2 gap-8">
+      <div
+        class="bg-background-alt border border-border p-6 rounded-xl shadow-lg"
+      >
+        <h3 class="text-lg text-accent font-bold mb-4">
+          Certificaciones Completadas
+        </h3>
+        <ul class="space-y-2">
+          {
+            certifications.map((cert) => (
+              <li class="text-sm text-text-main flex items-start gap-2">
+                <span class="text-accent">•</span>
+                {cert}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div
+        class="bg-background-alt border border-border p-6 rounded-xl shadow-lg"
+      >
+        <h3 class="text-lg text-accent font-bold mb-4">En Curso</h3>
+        <ul class="space-y-2">
+          {
+            inProgress.map((course) => (
+              <li class="text-sm text-text-main flex items-start gap-2">
+                <span class="text-yellow-400">⏳</span>
+                {course}
+              </li>
+            ))
+          }
+        </ul>
+
+        <div class="mt-6 pt-4 border-t border-border">
+          <h4 class="text-md text-accent font-semibold mb-2">Idiomas</h4>
+          <p class="text-sm text-text-main">
+            <strong>Español:</strong> Nativo<br />
+            <strong>Inglés:</strong> Intermedio (B1)
           </p>
         </div>
-      ))
-    }
+      </div>
+    </div>
   </div>
 </section>

@@ -3,28 +3,71 @@ import ProjectCard from "@/components/ProjectCard.astro";
 
 const projects = [
   {
-    title: "Clasificador de Voz por Formantes",
+    title: "FastShop – Visión por Computadora",
     description:
-      "Clasificador acústico-fonético usando formantes y energía para reconocimiento de vocales.",
-    year: 2025,
-    tech: ["Python", "SVM", "Señal de voz"],
+      "Proyecto en desarrollo para automatizar el cobro en supermercados mediante reconocimiento de productos en tiempo real.",
+    year: "May 2025 – Actual",
+    tech: ["Python", "PyTorch", "OpenCV", "Pillow"],
+    role: "Computer Vision Developer",
+    status: "En Desarrollo",
+    github: "https://github.com/soyisuss/FastShop",
   },
   {
-    title: "Predicción de saturación EcoBici",
+    title: "Alejandria – Ecommerce de Libros",
     description:
-      "Modelo predictivo con XGBoost para balancear estaciones de bicicletas públicas en CDMX.",
-    year: 2025,
-    tech: ["XGBoost", "Streamlit", "GeoData"],
+      "Diseño y desarrollo de un ecommerce funcional con arquitectura de microservicios. Lideré el desarrollo de la interfaz en React.",
+    year: "Abr 2025",
+    tech: ["React", "Node.js", "Firebase", "Docker"],
+    role: "Frontend Developer",
+    status: "Completado",
+    github: "https://github.com/caballeroyael/alejandria",
+  },
+  {
+    title: "Predicción de Desabasto EcoBici",
+    description:
+      "1er lugar en Hackatón Polinterpares IPN. Modelo predictivo con XGBoost para balancear estaciones de bicicletas públicas en CDMX.",
+    year: "2025",
+    tech: ["XGBoost", "Python", "Streamlit", "Pandas"],
+    role: "ML Developer",
+    status: "🏆 1er Lugar",
+    award: true,
+  },
+  {
+    title: "Connect 4 con IA",
+    description:
+      "Juego interactivo con PyGame y una IA basada en el algoritmo Min-Max con poda alfa-beta.",
+    year: "Jul 2024",
+    tech: ["Python", "PyGame", "Min-Max", "IA"],
+    role: "Python Developer - AI Engineer",
+    status: "Completado",
+  },
+  {
+    title: "Traductor Inglés - Español",
+    description:
+      "Desarrollo de traductor usando procesamiento de lenguaje natural (tokenización y lematización).",
+    year: "Oct 2024",
+    tech: ["Python", "NLTK", "NLP"],
+    role: "Software Developer",
+    status: "Completado",
+  },
+  {
+    title: "Reconocimiento de Voz en Inglés",
+    description:
+      "Desarrollo desde cero de un modelo de reconocimiento de voz en Python. En etapa de diseño e investigación.",
+    year: "En Desarrollo",
+    tech: ["Python", "ML", "Audio Processing"],
+    role: "ML Developer",
+    status: "En Desarrollo",
   },
 ];
 ---
 
-<section class="bg-background px-6 py-16">
-  <div class="max-w-5xl mx-auto">
+<section class="bg-background px-6 py-16" id="proyectos">
+  <div class="max-w-6xl mx-auto">
     <h2 class="text-2xl md:text-4xl font-semibold text-accent mb-8 text-center">
-      Proyectos destacados
+      Proyectos Destacados
     </h2>
-    <div class="grid gap-6 md:grid-cols-2">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((proj) => <ProjectCard {...proj} />)}
     </div>
   </div>

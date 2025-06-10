@@ -6,57 +6,76 @@ const skillCategories = [
     skills: [
       { name: "Python", icon: "devicon:python" },
       { name: "JavaScript", icon: "devicon:javascript" },
+      { name: "TypeScript", icon: "devicon:typescript" },
       { name: "SQL", icon: "devicon:mysql" },
     ],
   },
   {
-    title: "Frameworks & Librerías",
+    title: "IA y Ciencia de Datos",
     skills: [
+      { name: "PyTorch", icon: "devicon:pytorch" },
+      { name: "scikit-learn", icon: "devicon:scikitlearn" },
+      { name: "OpenCV", icon: "devicon:opencv" },
+      { name: "Pandas", icon: "devicon:pandas" },
+      { name: "NumPy", icon: "devicon:numpy" },
+    ],
+  },
+  {
+    title: "Web y Backend",
+    skills: [
+      { name: "React", icon: "devicon:react" },
+      { name: "Node.js", icon: "devicon:nodejs" },
       { name: "Astro", icon: "devicon:astro" },
       { name: "Tailwind CSS", icon: "devicon:tailwindcss" },
-      { name: "Pandas", icon: "devicon:pandas" },
-      { name: "Streamlit", icon: "simple-icons:streamlit" },
     ],
   },
   {
-    title: "Machine Learning & IA",
-    skills: [
-      { name: "Scikit-learn", icon: "devicon:scikitlearn" },
-      { name: "OpenAI API", icon: "simple-icons:openai" },
-      { name: "TensorFlow", icon: "devicon:tensorflow" },
-    ],
-  },
-  {
-    title: "Herramientas & DevOps",
+    title: "DevOps y CI/CD",
     skills: [
       { name: "Git", icon: "devicon:git" },
-      { name: "Linux", icon: "devicon:linux" },
+      { name: "GitHub Actions", icon: "devicon:github" },
       { name: "Docker", icon: "devicon:docker" },
-      { name: "VS Code", icon: "devicon:vscode" },
+      { name: "Google Cloud", icon: "devicon:googlecloud" },
+    ],
+  },
+  {
+    title: "Bases de Datos",
+    skills: [
+      { name: "MongoDB", icon: "devicon:mongodb" },
+      { name: "MySQL", icon: "devicon:mysql" },
+      { name: "Oracle", icon: "devicon:oracle" },
+      { name: "Firebase", icon: "devicon:firebase" },
+    ],
+  },
+  {
+    title: "Metodologías",
+    skills: [
+      { name: "SCRUM", icon: "simple-icons:scrum" },
+      { name: "Arquitecturas Limpias", icon: "simple-icons:architecture" },
     ],
   },
 ];
 ---
 
-<section class="bg-background-alt px-6 py-16">
+<section class="bg-background-alt px-6 py-16" id="habilidades">
   <div class="max-w-6xl mx-auto">
     <h2
       class="text-2xl md:text-4xl font-semibold text-accent mb-12 text-center"
     >
-      Habilidades Técnicas
+      Tecnologías y Herramientas
     </h2>
 
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {
         skillCategories.map((category) => (
           <div class="bg-background-hover rounded-xl p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-accent mb-4 text-center">
+            <h3 class="text-lg font-semibold text-accent mb-4 text-center">
               {category.title}
             </h3>
-            <div class="flex flex-wrap justify-center gap-3">
+            <div class="flex flex-wrap justify-center gap-2">
               {category.skills.map((skill) => (
                 <span class="flex items-center gap-2 text-sm bg-background text-text-main hover:bg-accent hover:text-white px-3 py-2 rounded-full shadow transition border border-border">
-                  <iconify-icon icon={skill.icon} class="text-lg" />
+                  <iconify-icon icon={skill.icon} class="text-base" />
                   {skill.name}
                 </span>
               ))}
